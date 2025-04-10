@@ -11,7 +11,7 @@ export default function Header() {
   const currentPath = pathname.replace('/', '');
 
   return (
-    <header className="container mx-auto flex items-center space-x-2 border-b px-2 py-1">
+    <header className="flex items-center space-x-2 border-b px-2 py-1">
       <Link to="/">
         <img src={images.logo} alt="logo" className="w-4" />
       </Link>

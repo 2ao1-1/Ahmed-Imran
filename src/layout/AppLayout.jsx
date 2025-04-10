@@ -12,11 +12,16 @@ export default function AppLayout() {
     <div className="grid h-screen cursor-default grid-rows-[auto_1fr_auto]">
       {isLoading && <Loader />}
       {/* <div className="overflow-scroll"> */}
-      <div className="">
+      <div className="container mx-auto">
+        {/* header */}
         <Header />
-        <main className="">
+
+        {/* main content */}
+        <main>
           <Outlet />
         </main>
+
+        {/* footer */}
         <Footer />
       </div>
     </div>
