@@ -133,7 +133,7 @@
     transition:
       width 0.5s,
       height 0.5s;
-    z-index: 1;
+    z-index: 2;
   }
 
   .fold-before:hover::before {
@@ -141,6 +141,7 @@
     height: 8em;
   }
 }
+
 .slideUp {
   position: relative;
   color: #000000;

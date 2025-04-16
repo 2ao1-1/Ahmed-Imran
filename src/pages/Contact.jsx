@@ -1,43 +1,26 @@
 import { Mail, MessageCircle } from 'lucide-react';
 import { useContact } from '../hooks/useContact';
-import { useInfo } from '../context/DataContext';
+// import { useInfo } from '../context/DataContext';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Social from '../features/Social';
 
 export default function Contact() {
   const { renderDynamicInput, sendEmail, sendWhatsApp } = useContact();
-  const { social } = useInfo();
+  // const { social } = useInfo();
 
   return (
-    <main className="text-primary grid h-screen items-center justify-center px-4 py-10">
+    <main className="grid h-screen items-center justify-center px-4 py-10 text-primary">
       <div className="mb-8">
         <h2 className="mb-4 font-headline text-3xl md:text-6xl">
           Let's Work Together
         </h2>
-        <ul className={`flex items-end gap-8 text-base`}>
-          {social.links.map((link, i) => (
-            <motion.li
-              key={i}
-              className={`flex text-end`}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.1 * i }}
-            >
-              <Link
-                to={link.link}
-                target="_blank"
-                className={`slideUp p-2 text-base transition-colors`}
-              >
-                {link.icon}
-                {/* {link.icon} */}
-              </Link>
-            </motion.li>
-          ))}
-        </ul>
+
+        <Social type={'icon'} row />
       </div>
       <div className="grid items-center justify-center">
-        <p className="bg-tertiory text-md mx-auto w-2/3 p-10 leading-6 md:text-xl md:leading-8">
+        <p className="text-md mx-auto w-2/3 bg-tertiory p-10 leading-6 md:text-xl md:leading-8">
           Hey Ahmed, my name is
           {renderDynamicInput('name', '[your first name]')}. I would like to
           start a new project with you. I'm looking for

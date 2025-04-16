@@ -3,8 +3,7 @@ import { useInfo } from '../../context/DataContext';
 import { motion } from 'framer-motion';
 
 export default function HeroAbout() {
-  const { name, story, images } = useInfo();
-  const storyContent = story.slice(1);
+  const { name, story, images, bio } = useInfo();
 
   const firstName = name.split(' ')[0];
   const lastName = name.split(' ')[1];
@@ -46,7 +45,7 @@ export default function HeroAbout() {
           transition={{ duration: 0.2, delay: 1 }}
           className="font-serif bottom-[26%] right-[21%] z-20 hidden w-[15%] text-sm tracking-wider md:absolute md:block"
         >
-          {story[0]}
+          {bio}
         </motion.p>
         <motion.span
           initial={{ opacity: 0, x: -100 }}
@@ -66,12 +65,12 @@ export default function HeroAbout() {
         className="col-span-1 py-6 md:col-span-4 md:px-4 md:py-8"
       >
         <p className="font-serif mb-4 text-justify text-sm md:hidden md:text-base">
-          {story[0]}
+          {bio}
         </p>
 
         <p className="columns-1 gap-6 text-justify text-sm sm:columns-2 md:columns-4 md:gap-8 md:text-base">
-          {storyContent.map((item, index) => (
-            <span key={index} className="block py-2">
+          {story.map((item, index) => (
+            <span key={index} className="block">
               {item}
             </span>
           ))}

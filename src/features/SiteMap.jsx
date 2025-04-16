@@ -21,7 +21,7 @@ export default function SiteMap({ view }) {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={parent[view]}
     >
-      <SubTitle type={view} title="SiteMap" />
+      {view === 'menu' && <SubTitle type={view} title="SiteMap" />}
       <motion.ul
         className={styles[view]}
         initial={{ opacity: 0, y: 20 }}

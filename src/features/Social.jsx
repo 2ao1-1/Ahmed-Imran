@@ -5,7 +5,7 @@ import SubTitle from './SubTitle';
 import { motion } from 'framer-motion';
 import BtnEffect from './BtnEffect';
 
-export default function Social({ type }) {
+export default function Social({ type, row }) {
   const { social } = useInfo();
   if (type === 'menu')
     return (
@@ -37,16 +37,15 @@ export default function Social({ type }) {
 
   if (type === 'icon')
     return (
-      <ul className="flex items-start gap-6 py-6 md:flex-col">
+      <ul
+        className={`flex items-start py-6 ${row ? 'gap-10' : 'gap-6 text-secondary hover:text-primary md:flex-col'}`}
+      >
         {social.links.map((social, i) => (
           <motion.li
             key={i}
             transition={{ type: 'spring', stiffness: 400, damping: 10 }}
           >
-            <Link
-              to={social.link}
-              className="text-secondary hover:text-primary"
-            >
+            <Link to={social.link} className="">
               <BtnEffect title={social.icon} />
             </Link>
           </motion.li>

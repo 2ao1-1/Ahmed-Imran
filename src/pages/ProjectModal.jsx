@@ -61,7 +61,7 @@ export default function ProjectModal() {
             </div>
             <div>
               <SubTitle title="Type" type="menu" />
-              <ul className="flex gap-1 font-headline text-xl tracking-wide">
+              <ul className="flex flex-wrap gap-1 font-headline text-xl tracking-wide">
                 {project.type.map((type, i) => (
                   <li key={i}>
                     {type}
@@ -84,15 +84,14 @@ export default function ProjectModal() {
 
           {/* content */}
           <div className="flex flex-wrap p-8">
-            <div className="md:w-1/2">
-              <div className="relative flex w-2/3 flex-col items-center gap-4">
+            <div className="md:w-1/2 md:pr-2">
+              <div className="relative flex flex-col items-center gap-4">
                 <div>
                   <p className="font-serif text-base tracking-wide">
                     {project.description}
                   </p>
                 </div>
                 <ul>
-                  <SubTitle title="Features" type="menu" />
                   {project.features.map((item, i) => (
                     <li>
                       {i + 1}. {item}
@@ -101,7 +100,7 @@ export default function ProjectModal() {
                 </ul>
               </div>
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 md:pl-2">
               <img
                 src={project.img}
                 alt={project.title}
@@ -110,7 +109,6 @@ export default function ProjectModal() {
             </div>
             <div className="relative bottom-0 flex w-full items-center justify-between pt-8">
               <div className="relative md:w-1/2">
-                {/* <SubTitle title="Skills" type="menu" /> */}
                 <ul className="flex flex-wrap space-x-2">
                   {project.skill.map((item, i) => (
                     <span
