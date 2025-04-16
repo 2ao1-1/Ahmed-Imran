@@ -6,6 +6,9 @@ import AppLayout from './layout/AppLayout';
 // pages
 import Index from './pages';
 import About from './pages/About';
+import Contact from './pages/Contact';
+import Projects from './pages/Projects';
+import ProjectModal from './pages/ProjectModal';
 
 // error & loader
 import Error from './layout/Error';
@@ -27,17 +30,18 @@ const router = createBrowserRouter([
       },
       {
         path: '/projects',
-        element: <p>projects page</p>,
+        element: <Projects />,
         errorElement: <Error />,
-      },
-      {
-        path: '/projects/:projectName',
-        element: <p>projects page</p>,
-        errorElement: <Error />,
+        children: [
+          {
+            path: ':projectName',
+            element: <ProjectModal />,
+          },
+        ],
       },
       {
         path: '/contact',
-        element: <p>contact page</p>,
+        element: <Contact />,
         errorElement: <Error />,
       },
     ],

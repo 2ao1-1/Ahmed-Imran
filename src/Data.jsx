@@ -21,7 +21,7 @@ export const Data = {
   },
   location: { city: 'Cairo', country: 'Egypt' },
   status: 'available for Freelance Projects',
-  siteMap: ['index', 'about', 'projects', 'contacts'],
+  siteMap: ['index', 'about', 'projects', 'contact'],
   education: {
     uni: 'Faculty of Commerce, Sadat University',
     field: 'Bachelor’s Degree in Business Administration',
@@ -117,6 +117,8 @@ export const Data = {
          with a taste of history`,
       url: 'https://crusto-resturant.netlify.app/',
       repo: 'https://github.com/2ao1-1/Crusto',
+      special: 'food website',
+      type: ['UI', 'Development'],
       description:
         "A modern and visually appealing website designed to showcase the restaurant's menu and services. The site provides visitors with an interactive and seamless browsing experience, reflecting the restaurant's unique identity.",
       skill: ['Html', 'Css', 'JavaScript', 'Tailwind'],
@@ -133,6 +135,9 @@ export const Data = {
       bio: 'A fitness website promoting healthy living.',
       url: 'https://banky.netlify.app/',
       repo: 'https://github.com/2ao1-1/Banki',
+      special: 'financial website',
+      type: ['Development'],
+
       description:
         'Banky is a sleek and professional website designed to showcase the services and features of a modern banking institution. It aims to deliver an intuitive user experience, emphasizing trust, reliability, and simplicity for potential customers.',
       skill: ['Html', 'Css', 'JavaScript'],
@@ -150,6 +155,8 @@ export const Data = {
       bio: 'An active lifestyle with fitness training.',
       url: 'https://moveon-fitness.netlify.app/',
       repo: 'https://github.com/2ao1-1/MoveOn',
+      special: 'fitness website',
+      type: ['Development'],
       description:
         'MoveOn Fitness combines dynamic visuals and structured content to inspire and guide users on their fitness journey. The website focuses on delivering a seamless and motivational user experience, catering to fitness enthusiasts and beginners alike.',
       skill: ['Html', 'Css', 'JavaScript', 'Tailwind'],
@@ -167,6 +174,8 @@ export const Data = {
       bio: 'Personal portfolio website showcasing frontend development skills and projects',
       url: 'https://2ao1.netlify.app/',
       repo: 'https://github.com/2ao1-1/AO',
+      type: ['UI', 'Development'],
+      special: 'portfolio',
       description:
         'A modern, responsive personal portfolio demonstrating web development expertise through interactive design and professional project showcase',
       skill: ['React', 'Tailwind', 'Framer Motion'],
@@ -187,6 +196,8 @@ export const Data = {
       bio: 'Personal portfolio website showcasing frontend development skills and projects',
       url: 'http://144.91.75.57:3000',
       repo: 'https://github.com/2ao1-1/bsaraha',
+      special: 'social website',
+      type: ['UI', 'Development'],
       description:
         'A modern, responsive personal portfolio demonstrating web development expertise through interactive design and professional project showcase',
       skill: ['React', 'Tailwind', 'Framer Motion'],
@@ -196,6 +207,24 @@ export const Data = {
         'Smooth animations and transitions',
         'Project showcase section',
         'Clean, modern aesthetic',
+      ],
+    },
+    {
+      title: 'Crusto Pizza',
+      date: '4 / 2025',
+      img: '/images/project6-crusto.jpg',
+      bio: `An Italian pizza restaurant`,
+      url: 'https://crusto-pizza.netlify.app/',
+      repo: 'https://github.com/2ao1-1/Crusto-v2',
+      special: 'food website',
+      type: ['UI', 'Development'],
+      description:
+        "A modern and visually appealing website designed to showcase the restaurant's menu and services. The site provides visitors with an interactive and seamless browsing experience, reflecting the restaurant's unique identity.",
+      skill: ['Html', 'Css', 'JavaScript', 'Tailwind'],
+      features: [
+        "Modern and attractive design that aligns with the restaurant's brand.",
+        'Simple and intuitive user interface.',
+        'Fully responsive layout for various screen sizes.',
       ],
     },
   ],

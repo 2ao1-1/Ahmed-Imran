@@ -5,11 +5,10 @@ import { Footer } from './Footer';
 
 export default function AppLayout() {
   const navigation = useNavigation();
-  console.log(navigation);
 
   const isLoading = navigation.state === 'loading';
   return (
-    <div className="grid h-screen cursor-default grid-rows-[auto_1fr_auto]">
+    <div className="text-primary grid cursor-default grid-rows-[auto_1fr_auto] bg-white">
       {isLoading && <Loader />}
       {/* <div className="overflow-scroll"> */}
       <div className="container mx-auto">
@@ -17,9 +16,7 @@ export default function AppLayout() {
         <Header />
 
         {/* main content */}
-        <main>
-          <Outlet />
-        </main>
+        <Outlet />
 
         {/* footer */}
         <Footer />

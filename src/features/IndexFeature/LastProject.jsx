@@ -5,7 +5,9 @@ import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { CornerRightUp } from 'lucide-react';
 import DemoBtn from './DemoBtn';
-import { Hint } from './Hint';
+import { Hint } from '../Hint';
+import SubTitle from '../SubTitle';
+import MoveBtn from '../MoveBtn';
 
 export default function LastProject() {
   const { projects } = useInfo();
@@ -14,9 +16,11 @@ export default function LastProject() {
   return (
     <motion.div className="md:col-span-8">
       {/* section title */}
-      <h2 className="mb-6 font-headline text-2xl text-stone-800">
-        Latest Project
-      </h2>
+      <div className="flex items-center justify-between py-4">
+        <SubTitle type="sub" title="Latest Project" />
+
+        <MoveBtn to="/projects" title="View All" type="head" />
+      </div>
 
       {/* project view */}
       <motion.div className="fold-before group relative overflow-hidden border border-stone-100 shadow-sm">

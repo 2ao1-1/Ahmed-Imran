@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { useInfo } from '../../context/DataContext';
+import SiteMap from '../SiteMap';
 
 export default function IndexHeader() {
   return (
@@ -18,7 +19,7 @@ export default function IndexHeader() {
       <MainHeader />
 
       {/* sitemap */}
-      <SiteMap />
+      <SiteMap view="page" />
     </motion.section>
   );
 }
@@ -59,53 +60,5 @@ function MainHeader() {
         {role}
       </p>
     </div>
-  );
-}
-
-function SiteMap() {
-  const { siteMap, projects } = useInfo();
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`col-span-3 sm:col-span-1`}
-    >
-      <span className="mb-2 hidden text-end text-xs text-stone-500 sm:block">
-        SiteMap
-      </span>
-      <motion.ul
-        className="flex justify-center gap-4 text-sm sm:flex-col sm:justify-end sm:gap-1 sm:text-end"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-      >
-        {siteMap.map((page, index) => {
-          const formattedPage =
-            page.charAt(0).toUpperCase() + page.slice(1).toLowerCase();
-          return (
-            <motion.li
-              key={index}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.1 * index }}
-              className="overflow-hidden text-end text-stone-600 hover:text-stone-900"
-            >
-              <Link
-                to={page === 'index' ? '/' : `/${page}`}
-                className="slideUp transition-colors duration-300"
-              >
-                <span>
-                  {page === 'projects'
-                    ? `${formattedPage}[${projects.length}]`
-                    : formattedPage}
-                </span>
-              </Link>
-            </motion.li>
-          );
-        })}
-      </motion.ul>
-    </motion.div>
   );
 }
